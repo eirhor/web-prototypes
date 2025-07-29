@@ -17,6 +17,10 @@ header `x-locale` on incoming requests. This has a config which allows
 for whitelisting locales, and configuring default locale, domain bindings
 and aliases for the locales.
 
+Behind the scenes it rewrites the request url to remove the url segment with the
+locale, meaning you don't have to adjust your folder structures
+for this implementation.
+
 An alias will map for example `no` from the request url to `nb-no` locale.
 
 You can then use the `utils/getLocale.ts` utility to read the locale anywhere
